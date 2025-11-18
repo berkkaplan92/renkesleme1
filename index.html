@@ -461,60 +461,63 @@
 
   <script>
     // VERİLER
-    const items = [
-      { id: "elma", tr: "ELMA", en: "Apple" },
-      { id: "armut", tr: "ARMUT", en: "Pear" },
-      { id: "muz", tr: "MUZ", en: "Banana" },
-      { id: "uzum", tr: "ÜZÜM", en: "Grapes" },
-      { id: "ananas", tr: "ANANAS", en: "Pineapple" },
-      { id: "cilek", tr: "ÇİLEK", en: "Strawberry" },
-      { id: "karpuz", tr: "KARPUZ", en: "Watermelon" },
-      { id: "kavun", tr: "KAVUN", en: "Melon" },
-      { id: "portakal", tr: "PORTAKAL", en: "Orange" },
-      { id: "kivi", tr: "KİVİ", en: "Kiwi" },
+   const items = [
+  // KIRMIZI
+  { id: "kirmizi", tr: "KIRMIZI" },
+  { id: "kirmizi1", tr: "KIRMIZI 1" },
+  { id: "kirmizi2", tr: "KIRMIZI 2" },
+  { id: "kirmizi3", tr: "KIRMIZI 3" },
+  { id: "kirmizi4", tr: "KIRMIZI 4" },
 
-      { id: "domates", tr: "DOMATES", en: "Tomato" },
-      { id: "salatalik", tr: "SALATALIK", en: "Cucumber" },
-      { id: "biber", tr: "BİBER", en: "Pepper" },
-      { id: "sarimsak", tr: "SARIMSAK", en: "Garlic" },
-      { id: "sogan", tr: "SOĞAN", en: "Onion" },
-      { id: "brokoli", tr: "BROKOLİ", en: "Broccoli" },
-      { id: "havuc", tr: "HAVUÇ", en: "Carrot" },
-      { id: "lahana", tr: "LAHANA", en: "Cabbage" },
-      { id: "misir", tr: "MISIR", en: "Corn" },
-      { id: "patlican", tr: "PATLICAN", en: "Eggplant" },
+  // MAVİ
+  { id: "mavi", tr: "MAVİ" },
+  { id: "mavi1", tr: "MAVİ 1" },
+  { id: "mavi2", tr: "MAVİ 2" },
+  { id: "mavi3", tr: "MAVİ 3" },
+  { id: "mavi4", tr: "MAVİ 4" },
 
-      { id: "araba", tr: "ARABA", en: "Car" },
-      { id: "kamyon", tr: "KAMYON", en: "Truck" },
-      { id: "motosiklet", tr: "MOTOSİKLET", en: "Motorcycle" },
-      { id: "bisiklet", tr: "BİSİKLET", en: "Bicycle" },
-      { id: "gemi", tr: "GEMİ", en: "Ship" },
-      { id: "helikopter", tr: "HELİKOPTER", en: "Helicopter" },
-      { id: "ucak", tr: "UÇAK", en: "Airplane" },
-      { id: "tren", tr: "TREN", en: "Train" },
-      { id: "otobus", tr: "OTOBÜS", en: "Bus" },
-      { id: "itfaiye_arabasi", tr: "İTFAİYE", en: "Fire Truck" },
+  // YEŞİL
+  { id: "yesil", tr: "YEŞİL" },
+  { id: "yesil1", tr: "YEŞİL 1" },
+  { id: "yesil2", tr: "YEŞİL 2" },
+  { id: "yesil3", tr: "YEŞİL 3" },
+  { id: "yesil4", tr: "YEŞİL 4" },
 
-      { id: "aslan", tr: "ASLAN", en: "Lion" },
-      { id: "kedi", tr: "KEDİ", en: "Cat" },
-      { id: "kopek", tr: "KÖPEK", en: "Dog" },
-      { id: "fil", tr: "FİL", en: "Elephant" },
-      { id: "kurbaga", tr: "KURBAĞA", en: "Frog" },
-      { id: "yunus", tr: "YUNUS", en: "Dolphin" },
-      { id: "kus", tr: "KUŞ", en: "Bird" },
-      { id: "ayi", tr: "AYI", en: "Bear" },
-      { id: "tavsan", tr: "TAVŞAN", en: "Rabbit" },
-      { id: "inek", tr: "İNEK", en: "Cow" },
-      { id: "koyun", tr: "KOYUN", en: "Sheep" },
-      { id: "at", tr: "AT", en: "Horse" },
-      { id: "kaplumbaga", tr: "KAPLUMBAĞA", en: "Turtle" },
-      { id: "tavuk", tr: "TAVUK", en: "Chicken" },
-      { id: "ordek", tr: "ÖRDEK", en: "Duck" },
-      { id: "balik", tr: "BALIK", en: "Fish" },
-      { id: "kaplan", tr: "KAPLAN", en: "Tiger" },
-      { id: "maymun", tr: "MAYMUN", en: "Monkey" },
-      { id: "keci", tr: "KEÇİ", en: "Goat" }
-    ];
+  // SARI
+  { id: "sari", tr: "SARI" },
+  { id: "sari1", tr: "SARI 1" },
+  { id: "sari2", tr: "SARI 2" },
+  { id: "sari3", tr: "SARI 3" },
+  { id: "sari4", tr: "SARI 4" },
+
+  // TURUNCU
+  { id: "turuncu", tr: "TURUNCU" },
+  { id: "turuncu1", tr: "TURUNCU 1" },
+  { id: "turuncu2", tr: "TURUNCU 2" },
+  { id: "turuncu3", tr: "TURUNCU 3" },
+  { id: "turuncu4", tr: "TURUNCU 4" },
+
+  // SİYAH
+  { id: "siyah", tr: "SİYAH" },
+  { id: "siyah1", tr: "SİYAH 1" },
+  { id: "siyah2", tr: "SİYAH 2" },
+  { id: "siyah3", tr: "SİYAH 3" },
+  { id: "siyah4", tr: "SİYAH 4" },
+
+  // MOR
+  { id: "mor", tr: "MOR" },
+  { id: "mor1", tr: "MOR 1" },
+  { id: "mor2", tr: "MOR 2" },
+  { id: "mor3", tr: "MOR 3" },
+  { id: "mor4", tr: "MOR 4" },
+
+  // PEMBE
+  { id: "pembe", tr: "PEMBE" },
+  { id: "pembe1", tr: "PEMBE 1" },
+  { id: "pembe2", tr: "PEMBE 2" },
+  { id: "pembe3", tr: "PEMBE 3" },
+  { id: "pembe4", tr: "PEMBE 4" }
+];
     // SESLER
 const successVoices = [
   new Audio("sounds/correct1.mp3"),
@@ -811,36 +814,45 @@ function enableCountingMode() {
     }
 
     function setupOptions() {
-      const others = shuffle(items.filter(i => i.id !== currentTarget.id)).slice(0, Math.max(currentChoices - 1, 0));
-      currentOptions = shuffle([currentTarget, ...others]).slice(0, currentChoices);
+  // 1) Drag item id’sini al (ör: "kirmizi3")
+  const id = currentTarget.id;
 
-      optionsRow.innerHTML = "";
-      currentOptions.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "card option-card";
-        card.dataset.id = item.id;
+  // 2) Renk - numara ayrıştır
+  const match = id.match(/([a-zA-Z]+)(\d*)/);
+  const renk = match[1];              // kirmizi
+  const index = match[2] || "";       // 3 ya da "" (numarasızsa boş)
 
-        const t = document.createElement("div");
-        t.className = "card-title";
-        t.textContent = item.tr;
+  // 3) Tüm renkler
+  const renkler = ["kirmizi", "mavi", "yesil", "sari", "turuncu", "siyah", "mor", "pembe"];
 
-        const imgDiv = document.createElement("div");
-        imgDiv.className = "card-image";
-        const img = document.createElement("img");
-        img.src = `assets/${item.id}.png`;
-        img.alt = item.tr;
-        imgDiv.appendChild(img);
+  // 4) Aynı indexteki diğer renkleri oluştur
+  let optionIds = renkler
+    .filter(r => r !== renk)
+    .map(r => r + index);     // ör: yesil3, mavi3, mor3
 
-        const sub = document.createElement("div");
-        sub.className = "card-subtitle";
-        sub.textContent = item.en;
+  // 5) Gereken kadar seçenek al
+  optionIds = shuffle(optionIds).slice(0, Math.max(currentChoices - 1, 0));
 
-        card.appendChild(t);
-        card.appendChild(imgDiv);
-        card.appendChild(sub);
-        optionsRow.appendChild(card);
-      });
-    }
+  // 6) Drag item’i de ekle
+  currentOptions = shuffle([currentTarget.id, ...optionIds]);
+
+  // 7) Kartları oluştur
+  optionsRow.innerHTML = "";
+  currentOptions.forEach(optId => {
+    const card = document.createElement("div");
+    card.className = "card option-card";
+    card.dataset.id = optId;
+
+    const imgDiv = document.createElement("div");
+    imgDiv.className = "card-image";
+    const img = document.createElement("img");
+    img.src = `assets/${optId}.png`;
+    imgDiv.appendChild(img);
+
+    card.appendChild(imgDiv);
+    optionsRow.appendChild(card);
+  });
+}
 
     // DRAG & DROP (stabil)
     let dragging = false;
