@@ -813,40 +813,40 @@ function enableCountingMode() {
       resetDragPosition(true);
     }
 
-    function setupOptions() {
-  // 1) Drag item id’sini al (ör: "kirmizi3")
+   function setupOptions() {
   const id = currentTarget.id;
 
-  // 2) Renk - numara ayrıştır
+  // Renk + sayı ayrıştır
   const match = id.match(/([a-zA-Z]+)(\d*)/);
-  const renk = match[1];              // kirmizi
-  const index = match[2] || "";       // 3 ya da "" (numarasızsa boş)
+  const renk = match[1];     // kirmizi
+  const index = match[2];    // 3
 
-  // 3) Tüm renkler
-  const renkler = ["kirmizi", "mavi", "yesil", "sari", "turuncu", "siyah", "mor", "pembe"];
+  const renkler = ["kirmizi","mavi","yesil","sari","turuncu","siyah","mor","pembe"];
 
-  // 4) Aynı indexteki diğer renkleri oluştur
+  // Aynı indexli diğer renk kartlarını oluştur
   let optionIds = renkler
     .filter(r => r !== renk)
-    .map(r => r + index);     // ör: yesil3, mavi3, mor3
+    .map(r => r + index);
 
-  // 5) Gereken kadar seçenek al
-  optionIds = shuffle(optionIds).slice(0, Math.max(currentChoices - 1, 0));
+  optionIds = shuffle(optionIds).slice(0, currentChoices - 1);
 
-  // 6) Drag item’i de ekle
-  currentOptions = shuffle([currentTarget.id, ...optionIds]);
+  currentOptions = shuffle([
+    currentTarget,  // drag kart
+    ...optionIds.map(id => ({ id, tr: id.toUpperCase() }))
+  ]);
 
-  // 7) Kartları oluştur
   optionsRow.innerHTML = "";
-  currentOptions.forEach(optId => {
+
+  currentOptions.forEach(item => {
     const card = document.createElement("div");
     card.className = "card option-card";
-    card.dataset.id = optId;
+    card.dataset.id = item.id;
+
+    const img = document.createElement("img");
+    img.src = `assets/${item.id}.png`;
 
     const imgDiv = document.createElement("div");
     imgDiv.className = "card-image";
-    const img = document.createElement("img");
-    img.src = `assets/${optId}.png`;
     imgDiv.appendChild(img);
 
     card.appendChild(imgDiv);
