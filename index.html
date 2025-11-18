@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <title>Nesne Eşleme Oyunu - V31 Final</title>
+  <title>Renk Eşleme Oyunu - V31 Final</title>
   <style>
     * {
       box-sizing: border-box;
@@ -391,7 +391,7 @@
   <!-- MENÜ -->
   <div id="menuScreen">
     <div class="menu-card">
-      <div class="menu-title">🎯 NESNE EŞLEME OYUNU</div>
+      <div class="menu-title">🎯 RENK EŞLEME OYUNU</div>
       <p class="menu-subtitle">Bir eşleme modu seç ve oyuna başla!</p>
 
       <button class="mode-button" data-choices="1">
@@ -809,8 +809,8 @@ function enableCountingMode() {
     function setupNewRound() {
       correctCountForItem = 0;
       currentTarget = randomItem();
-      dragTitle.textContent = currentTarget.tr;
-      dragSubtitle.textContent = currentTarget.en;
+      dragTitle.textContent = "";
+      dragSubtitle.textContent = "";
       dragImage.src = `assets/${currentTarget.id}.png`;
       dragImage.alt = currentTarget.tr;
       setupOptions();
