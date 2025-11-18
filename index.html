@@ -813,28 +813,31 @@ function enableCountingMode() {
       resetDragPosition(true);
     }
 
-   function setupOptions() {
+  function setupOptions() {
   const id = currentTarget.id;
 
   // Renk + sayı ayrıştır
   const match = id.match(/([a-zA-Z]+)(\d*)/);
-  const renk = match[1];     // kirmizi
-  const index = match[2];    // 3
+  const renk = match[1];     // ör: kirmizi
+  const index = match[2];    // ör: 3
 
   const renkler = ["kirmizi","mavi","yesil","sari","turuncu","siyah","mor","pembe"];
 
-  // Aynı indexli diğer renk kartlarını oluştur
+  // Aynı indexteki diğer renkleri oluştur (drag hariç)
   let optionIds = renkler
     .filter(r => r !== renk)
     .map(r => r + index);
 
+  // Kaç seçenek varsa ona göre kırp
   optionIds = shuffle(optionIds).slice(0, currentChoices - 1);
 
+  // Seçenekleri item listesine çevir (sadece id yeterli)
   currentOptions = shuffle([
-    currentTarget,  // drag kart
-    ...optionIds.map(id => ({ id, tr: id.toUpperCase() }))
+    currentTarget,                                 // Doğru kart
+    ...optionIds.map(id => ({ id }))               // Diğer renkler
   ]);
 
+  // Görselleri oluştur
   optionsRow.innerHTML = "";
 
   currentOptions.forEach(item => {
@@ -842,13 +845,13 @@ function enableCountingMode() {
     card.className = "card option-card";
     card.dataset.id = item.id;
 
+    const imgDiv = document.createElement("div");
+    imgDiv.className = "card-image";
+
     const img = document.createElement("img");
     img.src = `assets/${item.id}.png`;
 
-    const imgDiv = document.createElement("div");
-    imgDiv.className = "card-image";
     imgDiv.appendChild(img);
-
     card.appendChild(imgDiv);
     optionsRow.appendChild(card);
   });
